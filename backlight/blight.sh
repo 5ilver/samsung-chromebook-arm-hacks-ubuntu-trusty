@@ -1,7 +1,7 @@
 #!/bin/bash
 # Quick brightness control script for samsung series 3 arm chromebook running chrubuntu 14.04
 # Put this in /usr/local/bin/blight.sh
-# Run chroot +x /usr/local/bin/blight.sh
+# Run chmod +x /usr/local/bin/blight.sh
 # Add a line like this to /etc/sudoers:
 # silver ALL=NOPASSWD:/usr/local/bin/blight.sh
 # now use it like this:
