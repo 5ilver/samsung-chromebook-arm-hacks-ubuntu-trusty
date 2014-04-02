@@ -1,0 +1,14 @@
+chromebook-hacks (0.2) raring; urgency=low
+
+  * Rename source package to chromebook-hacks.
+  * Add chromebook-plymouth-hack package.
+  * Disable touchpad wakeup since it is too sensitive.
+  * Restart acpid on package removal.
+
+ -- Robie Basak <robie@justgohome.co.uk>  Fri, 17 May 2013 22:21:47 +0100
+
+chromebook-snooze-hack (0.1) raring; urgency=low
+
+  * Initial release.
+
+ -- Robie Basak <robie@justgohome.co.uk>  Wed, 20 Feb 2013 15:50:22 -0600

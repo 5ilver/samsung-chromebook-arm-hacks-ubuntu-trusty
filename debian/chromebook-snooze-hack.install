@@ -1,0 +1,7 @@
+snooze/98_record_interrupts etc/pm/sleep.d
+snooze/99_inform_upstart etc/pm/sleep.d
+snooze/disable-touchpad-wake.conf etc/init
+snooze/lid.conf etc/init
+snooze/snooze.conf etc/init
+snooze/lid.sh etc/acpi
+snooze/lidbtn etc/acpi/events

@@ -1,0 +1,16 @@
+#!/bin/sh
+
+PATH=/sbin:/usr/sbin:/bin:/usr/bin
+
+case "${1}" in
+        suspend)
+		now=`date`
+		echo "$now: Sending sleeping signal" >> /tmp/snooze.log
+		initctl emit --no-wait sleeping
+                ;;
+        resume)
+		now=`date`
+		echo "$now: Sending resuming signal" >> /tmp/snooze.log
+                initctl emit --no-wait resuming
+		;;
+esac

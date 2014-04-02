@@ -1,0 +1,36 @@
+Source: chromebook-hacks
+Section: admin
+Priority: optional
+Maintainer: Robie Basak <robie@justgohome.co.uk>
+Standards-Version: 3.9.4
+Build-Depends: debhelper (>= 9)
+
+Package: chromebook-snooze-hack
+Architecture: all
+Depends: acpid, pm-utils, upstart, ${misc:Depends}
+Conflicts: acpi-support
+Description: hack to work around Samsung ARM Chromebook suspend problems
+ The Samsung ARM Chromebook appears to randomly wake up for no apparent reason.
+ This package contains a set of ACPI and pm-utils hooks which cause the machine
+ to automatically go back to suspend if the lid remains closed for twenty
+ seconds after resume.
+ .
+ It also disables touchpad wake, which seems to be overly sensitive. This
+ should stop your battery from draining because the laptop woke up while in
+ your bag.
+ .
+ This is a hack. It leaves (low volume) logs in /tmp/snooze.log and
+ /tmp/interrupts/ and does not clean them up, although /tmp is cleaned on
+ reboot.
+ .
+ Please report success, failure and other feedback to
+ chromebook-arm@lists.launchpad.net. The more information we can gather, the
+ better our chances of fixing this problem properly instead of relying on this
+ hack.
+
+Package: chromebook-plymouth-hack
+Architecture: all
+Description: disable plymouth to work around LP bug 1082742
+ Bug 1082742 causes plymouth to crash and for the boot to hang. This package
+ provides the correct upstart override files to disable plymouth and start
+ lightdm correctly.

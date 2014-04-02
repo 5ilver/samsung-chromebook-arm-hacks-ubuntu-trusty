@@ -1,0 +1,4 @@
+start on ((filesystem
+           and runlevel [!06]
+           and started dbus)
+          or runlevel PREVLEVEL=S)
